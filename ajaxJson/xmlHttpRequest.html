@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Index Page</title>
+	</head>
+	<body>
+		<div id="out1"></div>
+		<div id="out2"></div>
+		<script>
+			var xhr = new XMLHttpRequest();
+			const out1 = document.getElementById('out1');
+			const out2 = document.getElementById('out2');		
+
+			xhr.open("GET","https://api.myjson.com/bins/bk79l",true);
+			xhr.send();
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState===4 && xhr.status===200){
+					//console.log(xhr.responseText);
+					let myObj = JSON.parse(xhr.responseText);
+					//console.log(myObj.results);
+					// out1.textContent = `${myObj.results[0].name.first}`;
+					// out2.textContent = `${myObj.results[0].name.last}`;
+					myObj.results.forEach(function(item){
+						console.log(item);
+						out1.innerHTML += `${item.name.first} ${item.name.last} <img src="${item.picture.large}"><br>`
+					})
+				}
+			}
+		</script>	
+	</body>
+</html>

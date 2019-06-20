@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Javascript Fetch</title>
+</head>
+
+<body>
+    <div id="out1"></div>
+    <div id="out2"></div>
+    <script>
+        const out1 = document.getElementById('out1');
+        const out2 = document.getElementById('out2');
+        const url = 'https://api.myjson.com/bins/bk79l';
+        fetchData();
+
+        function fetchData() {
+            fetch(url)    //Using Javascript function fetch
+                .then(function (res) {
+                    return res.json()
+                })
+                .then(function (data) {
+                    console.log(data.results);
+                    data.results.forEach(function (item) {
+                        out1.innerHTML += `${item.name.first} ${item.name.last} <hr>`
+                    })
+                })
+        }
+    </script>
+</body>
+
+</html>
