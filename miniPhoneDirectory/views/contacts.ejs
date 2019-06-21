@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Directory</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+</head>
+<body style="background-color: black; padding-top: 30px;">
+	<div class="container-fluid">
+		<div class="cont">
+			<h2 style="color: black;">My Directory <a style="color: black; padding-left: 250px; text-decoration: none" href="/">Add New Contact</a></h2>
+		</div>
+		<div class="data">
+			<table cellpadding="30px" border="5px" >
+				<tr>
+					<th><h2>Name</h2></th>
+					<th><h2>Address</h2></th>
+					<th><h2>Phone</h2></th>
+				</tr>
+			
+				<% items.forEach(function(items){ %>
+				<tr>
+	    			<td><%= items.name %></td> <td><%= items.address %></td><td> <%= items.phone %></td>
+	    		</tr>
+  				<% }); 
+  			%>
+  			</table>
+		</div>
+	</div>
+</body>
+</html>

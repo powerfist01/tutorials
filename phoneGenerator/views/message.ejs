@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>PhoneGenerator</title>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    </head>
+    <body style="background-color:deeppink; width: 100%;">
+        <div class="container-fluid">
+            <div class="icon">
+                <i class="fas fa-phone fa-2x"></i>
+            </div>
+            <br>
+            <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Generate Another Number</h5>
+                            <p class="card-text">To Generate another phone Number of Yours.</p>
+                            <a href="/" class="btn btn-primary">Click Here</a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title" >Generate Fancy Number</h5>
+                            <p class="card-text">To generate a number of your Choice.</p>
+                            <a href="/fancy" class="btn btn-primary">Click Here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="card text-center">
+                <div class="card-header">
+                    Number Generated
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Your New Number is:</h5>
+                    <p class="card-text"><%= value %></p>
+                </div>
+                <div class="card-footer text-muted">
+                    Visit Again
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

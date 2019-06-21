@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Phone Directory</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row>">
+			<div class="col">
+				<i class="fas fa-phone fa-2x"></i>
+			</div>
+			<div class="col">
+				<a href="/" style="text-decoration:none;"><h1>Welcome To Phone Number <br>Generator</h1></a>			</div>
+			<div class="col">
+			</div>
+		</div>
+		
+		<div class="main wrapper">
+			<div class="main-agileinfo">
+				<div class="agileits-top">
+					<form action="/addFancy" method="post">
+						<input class="text" type="text" name="name" placeholder="Username" required="">
+						<input class="text phone" type="text" name="email" placeholder="Email" required="">
+                        <input class="text phone" type="text" name="address" placeholder="Address" required="">
+                        <input class="text" type="text" name="phone" placeholder="Phone" required="">
+						<input type="submit" value="Request for Number">
+					</form>
+				</div>
+			</div>
+        </div>
+
+        <%if (message.length > 0) { %>
+            <script>
+                alert('Number Already Taken');
+            </script>
+        <% } %>
+
+	</div>
+	<script type="text/javascript" src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Phone Directory</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> 
+	addEventListener("load", function() { 
+		setTimeout(hideURLbar, 0); 
+	}, false); 
+	function hideURLbar(){ 
+		window.scrollTo(0,1); 
+	} 
+</script>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+
+</head>
+<body style="padding-top: 100px;">
+	<!-- main -->
+	<a href="/contacts" style="text-decoration: none; font-size: 5em;">My Contacts</a>
+	<div class="main wrapper">
+		<h1>Add Your Details</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form action="/insert" method="post">
+					<input class="text" type="text" name="name" placeholder="Username" required="">
+					<input class="text phone" type="text" name="phone" placeholder="Phone Number" required="">
+					<input class="text" type="text" name="address" placeholder="Address" required="">
+					<input type="submit" value="SAVE">
+				</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/script.js"></script>
+</body>
+</html>

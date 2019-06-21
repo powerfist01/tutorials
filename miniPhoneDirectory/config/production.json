@@ -1,0 +1,5 @@
+{
+    "dbURL":"mongodb://powerfist01:mypassword123@ds253840.mlab.com:53840/phone",
+    "sessionSecret":"ASDFGHJKLLLJGFSSDFGHJGFDFGHBGHHBHNHN",
+    "host":"https://miniphonedirectory.herokuapp.com"
+}

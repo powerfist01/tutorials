@@ -1,0 +1,5 @@
+{
+    "dbURL":"mongodb://powerfist01:mypassword123@ds147746.mlab.com:47746/phonenumber",
+    "sessionSecret":"ASDFGHJKLLLJGFSSDFGHJGFDFGHBGHHBHNHN",
+    "host": "https://phonegenarator.herokuapp.com/"
+}

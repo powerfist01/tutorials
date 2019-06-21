@@ -1,0 +1,33 @@
+{
+  "name": "phonedirectory",
+  "version": "1.0.0",
+  "description": "A Mini Phone Directory",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/powerfist01/Mini-Phone-Directory.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/powerfist01/Mini-Phone-Directory/issues"
+  },
+  "homepage": "https://github.com/powerfist01/Mini-Phone-Directory#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect-mongo": "^2.0.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "handlebars": "^4.1.1",
+    "heroku": "^7.22.7",
+    "hogan-express": "^0.5.2",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.4.20",
+    "multer": "^1.4.1",
+    "mustache": "^3.0.1",
+    "path": "^0.12.7"
+  }
+}
