@@ -18,6 +18,7 @@ passport.deserializeUser(function (id, done) {
         done(err, user);
     });
 });
+mongoose.Promise = global.Promise;
 
 const url = "mongodb://localhost:27017/myproject";
 mongoose.connect(url, { useNewUrlParser: true });
@@ -53,19 +54,21 @@ function verifyToken(req,res,next){
         req.token = bearerToken;
         next();
     }else{
-        res.sendStatus(403);
-    }
+        res.sendStatus(403); 
+    } 
 }
+
+
 
 app.post('/helloworld', verifyToken, function(req,res,next){
     jwt.verify(req.token, 'iamsexyandiknowit',function(err,data){
         if(err)
-            throw err;
-        else
-        res.json({
-            "message":"Yahan aana allowed nahi tha",
-            "gist":"lekin aa gya"
-        })
+            res.sendStatus(403);
+        else{
+            var decoded = jwt.decode(req.token); 
+            console.log(decoded);
+            res.json(data);
+        }
     })
 })
 

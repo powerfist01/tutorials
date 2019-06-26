@@ -1,117 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <title>Document</title>
-    <script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js"></script>
-<script src="https://unpkg.com/vue-chartkick@0.5.1"></script>
+
 </head>
+
 <body>
-    <div id="app">
-      <line-chart :data="chartData"></line-chart>
-            <area-chart :data="{'2017-01-01 00:00:00 -0800': 2, '2017-01-01 00:01:00 -0800': 5}"></area-chart>
+	<h1>Firebase</h1>
+ 
+
 
     </div>
 
-    <script>
-      var app = new Vue({
-        el: "#app",
-        data: {
-          chartData: [["Jan", 4], ["Feb", 2], ["Mar", 10], ["Apr", 5], ["May", 3]]
-        }
-      })
-    </script>
-    <!-- <div id="app2">
-        <p>{{message}}</p>
-        <h1 v-bind:html="message"></h1>
-    </div>
 
-    <br>
-    <hr> -->
-    <!-- <div id="app">
-        {{people}}
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
 
-        <table>
-            <tr v-for="(item,i) in people" key="i">
-                <td>{{i}}: {{item.name}}</td>
-                <td>{{i}}: {{item.age}}</td>
-            </tr>
-        </table> -->
-        <!-- <p>Hi {{showName()}}</p>
-        <p>{{sum(1,2)}}</p>
-        {{ message }}
-        <br>
-        <p>{{a}}</p>
-        <br>
-        {{a+b}}
-        <br>
-        {{show}}
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+	     https://firebase.google.com/docs/web/setup#config-web-app -->
 
-        <button v-on:click="showUser">Click ne</button>
-        <button v-on:click="increase">Click me</button>
+	<script>
+	  // Your web app's Firebase configuration
+	  var firebaseConfig = {
+	    apiKey: "AIzaSyAkEz9BMr8ImWDfwZtDlss8eh5quy9PloI",
+	    authDomain: "fire-demo-a5e14.firebaseapp.com",
+	    databaseURL: "https://fire-demo-a5e14.firebaseio.com",
+	    projectId: "fire-demo-a5e14",
+	    storageBucket: "",
+	    messagingSenderId: "508956584637",
+	    appId: "1:508956584637:web:f8b905a5e6f3a2ee"
+	  };
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+	  var name = "Sataish"
 
-        <p v-if="isAdmin == true">THis is for Admin</p>
-        <p v-else>THis is for Supper ADMIN</p> -->
-
-
-    <!-- </div>
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                    message: 'Hello Vue!',
-                    a:19,
-                    b:34,
-                    show:false,
-                    isAdmin:true,
-                    people:[
-                        {
-                            "name":"asd",
-                            "age":"12"
-                        },
-                        {
-                            "name":"aaaaaaaa",
-                            "age":"122"
-                        },
-                        {
-                            "name":"afffsd",
-                            "age":"123"
-                        },
-                        {
-                            "name":"gggfrr",
-                            "age":"123"
-                        }
-                    ]
-                },
-
-            methods: {
-                showName(){
-                    return "Sujeet"
-                },
-                sum(a,b){
-                    return a+b;
-                },
-                showUser(){
-                    return this.isAdmin = !this.isAdmin
-                },
-                increase(){
-                    return this.a++;
-                }
-            },
-        })
-
-        var app = new Vue({
-            el: '#app2',
-            data: {
-                    message: 'Hello asd !'
-                },
-
-            methods: {
-            },
-        })
-    </script> -->
+	  firebase.database().ref('products/product2').remove();
+	</script>
 </body>
+
 </html>
