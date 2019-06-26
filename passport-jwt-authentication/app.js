@@ -10,6 +10,8 @@ var passportJWT = require("passport-jwt");
 var ExtractJwt = passportJWT.ExtractJwt;
 var JwtStrategy = passportJWT.Strategy;
 
+//for database purposes
+
 var users = [
   {
     id: 1,
@@ -24,8 +26,8 @@ var users = [
 ];
 
 var jwtOptions = {}
-jwtOptions.jwtFromRequest = ExtractJwt.fromAuthHeader();
-jwtOptions.secretOrKey = 'tasmanianDevil';
+jwtOptions.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
+jwtOptions.secretOrKey = 'iamsexyandiknowit';
 
 var strategy = new JwtStrategy(jwtOptions, function(jwt_payload, next) {
   console.log('payload received', jwt_payload);
@@ -81,14 +83,13 @@ app.get("/secret", passport.authenticate('jwt', { session: false }), function(re
   res.json({message: "Success! You can not see this without a token"});
 });
 
-app.get("/secretDebug",
-  function(req, res, next){
+app.get("/secretDebug",function(req, res, next){
     console.log(req.get('Authorization'));
     next();
   }, function(req, res){
     res.json("debugging");
 });
 
-app.listen(3000, function() {
+app.listen(3333, function() {
   console.log("Express running");
 });
