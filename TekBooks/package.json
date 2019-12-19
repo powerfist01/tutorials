@@ -16,7 +16,7 @@
     "construx-less": "^1.0.0",
     "dust-makara-helpers": "^4.1.2",
     "dustjs-helpers": "^1.7.3",
-    "eslint": "^1.10.3",
+    "eslint": "^6.7.2",
     "express": "^4.12.2",
     "kraken-js": "^1.0.3",
     "makara": "^2.0.3",
